@@ -3,6 +3,35 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
-    <context:annotation-config />
-    <context:component-scan base-package="foo.bar"/>
+    <context:annotation-config/>
+    <context:component-scan base-package="com"/>
+
+    <bean id="loggerListener" class="com.logging.LoggerListener"/>
+    <bean id="consoleEventLogger" class="com.logging.ConsoleEventLogger"/>
+
+    <bean id="newsServlet" class="com.main_servlet.NewsServlet"/>
+
+    <bean id="jsonContainer" class="com.json_news_item.JSONContainer"/>
+
+    <bean id="jspLogic" class="com.jsp_handler.JspLogic"/>
+
+    <bean id="downloadNewsFeed" class="com.get_news_feed_file.DownloadNewsFeedFile"/>
+
+    <bean id="imageLinkContainer" class="com.news_config.ImagesLinksContainer"/>
+    <bean id="newsLinks" class="com.news_config.NewsLinks"/>
+
+    <bean id="filteringByAuthor" class="com.news_filters.FilteringByAuthor"/>
+
+    <bean id="news" class="com.news_item.News"/>
+    <bean id="newsContainer" class="com.news_item.NewsContainer"/>
+
+    <bean id="xmlParser" class="com.xml_parser.XMLParser"/>
+
+    <bean id="newsSession" class="com.news_session.NewsSession"/>
+
+    <bean id="jsonObject" class="org.json.simple.JSONObject" scope="prototype"/>
+    <bean id="jsonArray" class="org.json.simple.JSONArray"/>
+    <bean id="parser" class="org.json.simple.parser.JSONParser" scope="prototype"/>
+
+
 </beans>
